@@ -2674,7 +2674,7 @@ namespace ts {
         return PackageNameValidationResult.Ok;
     }
 
-    //useme
+    //mv
     export function renderPackageNameValidationFailure(result: PackageNameValidationResult, typing: string): string {
         switch (result) {
             case PackageNameValidationResult.EmptyName:
@@ -2694,5 +2694,12 @@ namespace ts {
             default:
                 Debug.assertNever(result);
         }
+    }
+
+    //mv
+    export interface InstallPackageOptions {
+        fileName: Path,
+        packageName: string,
+        tsconfigLocation: Path,
     }
 }
